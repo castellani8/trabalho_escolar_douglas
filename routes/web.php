@@ -23,6 +23,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 
 // Rotas para registrar itens
-Route::get('/register/company', [App\Http\Controllers\RegisterController::class, 'company'])->name('register.company');
+Route::resource('/register/company', App\Http\Controllers\RegisterController::class);
 Route::get('/register/service', [App\Http\Controllers\RegisterController::class, 'service']);
 Route::get('/register/serviceType', [App\Http\Controllers\RegisterController::class, 'serviceType']);
