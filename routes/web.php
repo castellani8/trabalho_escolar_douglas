@@ -24,5 +24,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 // Rotas para registrar itens
 Route::resource('company', App\Http\Controllers\CompanyController::class);
+Route::resource('formulary', App\Http\Controllers\FormularyController::class);
 Route::resource('service', App\Http\Controllers\ServiceController::class);
 Route::resource('service-type', App\Http\Controllers\ServiceTypeController::class);

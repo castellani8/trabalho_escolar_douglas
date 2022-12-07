@@ -3,27 +3,26 @@
 @section('content')
 
 <div class="container">
-    <form>
+    <form action="{{ route('company.store') }}" method="POST">
+        @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="text-center mb-3">Cadastro de Empresas</h1>
-                    <label for="">Id da empresa:</label>
-                    <input class="form-control mb-3" required>
                     
                     <label for="">Nome da empresa:</label>
-                    <input class="form-control mb-3" required>
+                    <input class="form-control mb-3" id="company_name" name="company_name" required>
 
                     <label for="">Segmento:</label>
-                    <input class="form-control mb-3" required>
+                    <input class="form-control mb-3" id="segment" name="segment" required>
 
                     <label for="">Endereço:</label>
-                    <input class="form-control mb-3" required>
+                    <input class="form-control mb-3" id="address" name="address" required>
 
                     <label for="">Cidade:</label>
-                    <input class="form-control mb-3" required>
+                    <input class="form-control mb-3" id="city" name="city" required>
 
                     <label for="">UF:</label>
-                    <select id="estado" name="estado" class="form-select mb-3" required>
+                    <select name="state" id="state" class="form-select mb-3" required>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -55,7 +54,7 @@
                     </select>
 
                     <label for="">CEP:</label>
-                    <input class="form-control mb-3" required>
+                    <input class="form-control mb-3" id="postal_code" name="postal_code" required>
             </div>
         </div>
         <div class="row">

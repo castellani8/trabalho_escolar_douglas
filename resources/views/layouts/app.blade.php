@@ -82,6 +82,7 @@
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="{{ url('company/create') }}">Empresas</a></li>
                               <li><a class="dropdown-item" href="#">Serviços</a></li>
+                              <li><a class="dropdown-item" href="{{ url('formulary/index') }}">Formularios</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="#">Tipos de Serviços</a></li>
                             </ul>

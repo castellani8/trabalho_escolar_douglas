@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
+use App\Models\Formulary;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+global $formulary;
+global $company;
+
+class FormularyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +18,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
-        return view('company.index', $companies);
+        $formulary = Formulary::all();
+        return view('formulary.index', $formulary);
     }
 
     /**
@@ -26,7 +29,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('company.create');
+        //
     }
 
     /**
@@ -35,13 +38,17 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompanyRequest $request)
-    {
-        Company::query()
-            ->create($request->validated());
+    public function store(Request $request)
+    { {
+            $customer = Company::create($request->all());
 
+            if ($customer) {
+            }
+            return redirect()->route('customers.index');
+            Formulary::create($request->post());
+            return redirect()->route('Formulary.index')->with('success', 'The formulary has been created successfully.');
+        }
 
-        return redirect()->back();
     }
 
     /**
@@ -52,7 +59,7 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Formulary.edit');
     }
 
     /**
@@ -63,7 +70,7 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('formulary.edit');
     }
 
     /**
@@ -73,9 +80,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Formulary $formulary, Company $company)
     {
-        //
+
     }
 
     /**
@@ -86,6 +93,9 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $company->delete();
+        return redirect()->route('Formulary.index')->with('success', 'Company has been deleted successfully');
     }
 }
+;
+
