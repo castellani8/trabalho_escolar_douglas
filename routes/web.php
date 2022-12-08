@@ -30,3 +30,4 @@ Route::resource('order', App\Http\Controllers\OrderController::class);
 Route::resource('service', App\Http\Controllers\ServiceController::class);
 Route::resource('service-order', App\Http\Controllers\ServiceOrderController::class);
 Route::resource('service-type', App\Http\Controllers\ServiceTypeController::class);
+Route::resource('fleet', App\Http\Controllers\FleetController::class);

@@ -76,8 +76,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">Início</a>
                         </li>
-                          <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('company') }}">Empresas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('fleet') }}">Frota</a>
                         </li>
                           <li class="nav-item">
                             <a class="nav-link" href="{{ url('service') }}">Serviços</a>
@@ -93,9 +96,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('service-order') }}">Ordem de Serviço</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Parâmetros de Serviços</a>
                         </li>
                     </ul>
                 </div>
