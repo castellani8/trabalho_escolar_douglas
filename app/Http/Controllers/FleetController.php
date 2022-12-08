@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Fleet;
+use App\Http\Requests\FleetRequest;
+
 
 class FleetController extends Controller
 {
@@ -32,9 +35,13 @@ class FleetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FleetRequest $request)
     {
-        //
+        Fleet::query()
+        ->create($request->validated());
+
+        return redirect()->back();
+
     }
 
     /**
