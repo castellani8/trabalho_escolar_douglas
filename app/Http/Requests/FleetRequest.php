@@ -25,9 +25,10 @@ class FleetRequest extends FormRequest
     {
         return [         
                 'company_id' => 'string',
-                'desc_frota' => 'varchar',
+                'desc_frota' => 'string',
                 'active' => 'string',
                 'hystory' => 'string',
+                'dt_manut' => 'string',
         ];
     }
 }
