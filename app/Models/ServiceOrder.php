@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceOrder extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'order_id',
+        'service_id',
+        'delivery_date',
+        'order_date',
+        'fleet_id',
+        'maintenance_type_id'
+    ];
 }

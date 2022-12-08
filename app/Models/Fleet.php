@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Fleet extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'desc_manut',
-        'items_quantity'
+        'company_id',
+        'desc_frota',
+        'active',
+        'hystory'
     ];
 }
