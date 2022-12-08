@@ -76,19 +76,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">Início</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Cadastrar
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="{{ url('company/create') }}">Empresas</a></li>
-                              <li><a class="dropdown-item" href="#">Serviços</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Tipos de Serviços</a></li>
-                            </ul>
-                          </li>
                           <li class="nav-item">
+                            <a class="nav-link" href="{{ url('company/create') }}">Empresas</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Servios</a>
+                        </li> 
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Parâmetros de Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tipos de Serviços</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tipo de Manutenção</a>

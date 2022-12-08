@@ -13,7 +13,7 @@ class MaintenanceTypeController extends Controller
      */
     public function index()
     {
-        //
+        return view('maintenanceType.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class MaintenanceTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('maintenanceType.create');
     }
 
     /**

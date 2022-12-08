@@ -13,7 +13,7 @@ class ServiceTypeController extends Controller
      */
     public function index()
     {
-        //
+        return view('serviceType.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ServiceTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('serviceType.create');
     }
 
     /**

@@ -13,7 +13,7 @@ class ServiceOrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('serviceOrder.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ServiceOrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('serviceOrder.create');
     }
 
     /**
