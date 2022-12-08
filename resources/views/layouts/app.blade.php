@@ -77,13 +77,13 @@
                             <a class="nav-link" href="{{ route('home') }}">Início</a>
                         </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="{{ url('company/create') }}">Empresas</a>
+                            <a class="nav-link" href="{{ url('company') }}">Empresas</a>
                         </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Servios</a>
+                            <a class="nav-link" href="{{ url('service') }}">Serviços</a>
                         </li> 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Parâmetros de Serviços</a>
+                            <a class="nav-link" href="{{url('') }}">Parâmetros de Serviços</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tipos de Serviços</a>
