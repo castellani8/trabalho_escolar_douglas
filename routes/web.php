@@ -25,7 +25,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // Rotas para registrar itens
 Route::resource('company', App\Http\Controllers\CompanyController::class);
 Route::resource('fleet', App\Http\Controllers\FleetController::class);
-Route::resource('maitenance', App\Http\Controllers\MaintenanceTypeController::class);
+Route::resource('maintenance', App\Http\Controllers\MaintenanceTypeController::class);
 Route::resource('order', App\Http\Controllers\OrderController::class);
 Route::resource('service', App\Http\Controllers\ServiceController::class);
 Route::resource('service-order', App\Http\Controllers\ServiceOrderController::class);

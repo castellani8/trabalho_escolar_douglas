@@ -83,19 +83,19 @@
                             <a class="nav-link" href="{{ url('service') }}">Serviços</a>
                         </li> 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('') }}">Parâmetros de Serviços</a>
+                            <a class="nav-link" href="{{ url('service-type') }}">Tipos de Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tipos de Serviços</a>
+                            <a class="nav-link" href="{{ url('maintenance') }}">Tipos de Manutenção</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tipo de Manutenção</a>
+                            <a class="nav-link" href="{{ url('order') }}">Compras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Compras</a>
+                            <a class="nav-link" href="{{ url('service-order') }}">Ordem de Serviço</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ordem de Serviço</a>
+                            <a class="nav-link" href="#">Parâmetros de Serviços</a>
                         </li>
                     </ul>
                 </div>
