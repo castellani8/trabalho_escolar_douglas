@@ -2,11 +2,8 @@
 
 @section('content')
 
-<div class="row justify-content-center">
- 
-  
+<div class="container justify-content-center">
   <div class="col-auto">
-    <table class="table table-responsive">
     <h1>Frotas</h1>
     <table class="table table-striped table-light">
     <thead>

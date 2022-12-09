@@ -9,7 +9,7 @@
   <div class="col-auto">
     <table class="table table-responsive">
     <h1>Empresas</h1>
-    <table class="table table-striped table-dark">
+    <table class="table table-striped table-light">
     <thead>
       <tr>
         <th scope="col">Nome da Empresa</th>

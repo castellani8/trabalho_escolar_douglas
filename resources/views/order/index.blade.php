@@ -2,14 +2,11 @@
 
 @section('content')
 
-<div class="row justify-content-center">
+<div class="container justify-content-center">
   <div class="col-auto">
-     <table class="table table-responsive">
      <h1>Pedidos</h1>
-     <table class="table table-striped table-dark">
+     <table class="table table-striped table-light">
      <thead>
-     <table class="table table-striped table-dark">
-    <thead>
       <tr>
         <th scope="col">Quantidade de itens</th>
         <th scope="col">Descrição manutenção</th>
