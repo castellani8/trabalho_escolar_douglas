@@ -8,7 +8,7 @@
   <div class="col-auto">
     <table class="table table-responsive">
     <h1>Frotas</h1>
-    <table class="table table-striped table-dark">
+    <table class="table table-striped table-light">
     <thead>
     <thead>
       <tr>

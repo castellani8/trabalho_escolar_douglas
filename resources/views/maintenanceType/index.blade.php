@@ -4,11 +4,8 @@
 
 <div class="row justify-content-center">
  <div class="col-auto">
-    <table class="table table-responsive">
     <h1>Tipos de Manutenção</h1>
-    <table class="table table-striped table-dark">
-    <thead>
-    <table class="table table-striped table-dark">
+    <table class="table table-striped table-light">
     <thead>
       <tr>
         <th scope="col">Tipos de Manutenção</th>

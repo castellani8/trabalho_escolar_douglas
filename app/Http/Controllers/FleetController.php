@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Fleet;
 use App\Http\Requests\FleetRequest;
-
+use App\Models\Company;
 
 class FleetController extends Controller
 {
@@ -26,7 +26,8 @@ class FleetController extends Controller
      */
     public function create()
     {
-        return view('fleet.create');
+        $companies = Company::all();
+        return view('fleet.create', compact('companies'));
     }
 
     /**
@@ -38,7 +39,7 @@ class FleetController extends Controller
     public function store(FleetRequest $request)
     {
         Fleet::query()
-        ->create($request->validated());
+            ->create($request->validated());
 
         return redirect()->back();
 
