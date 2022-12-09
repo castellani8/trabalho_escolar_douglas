@@ -39,7 +39,7 @@ class MaintenanceTypeController extends Controller
         MaintenanceType::query()
             ->create($request->validated());
 
-        return redirect()->back();
+        return redirect(url('maintenance'));
 
     }
 

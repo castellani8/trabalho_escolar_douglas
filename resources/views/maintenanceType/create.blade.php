@@ -7,8 +7,7 @@
         @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="text-center mb-3">Tipos de manutenção</h1>
-                    
+                <h1 class="text-center mb-3">Tipos de manutenção</h1> 
                     <label for="">Tipo de manutenção</label>
                     <input type="text" min="1" max="50" class="form-control mb-3" id="desc_manut" name="desc_manut" required>
             </div>
