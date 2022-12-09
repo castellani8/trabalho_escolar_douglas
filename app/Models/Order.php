@@ -11,6 +11,6 @@ class Order extends Model
 
     protected $fillable = [
         'desc_buy',
-        'itens_qtd'
+        'qtd_itens'
     ];
 }

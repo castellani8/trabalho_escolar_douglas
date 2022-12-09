@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string("desc_buy", 50);
-            $table->integer("itens_quantity");
+            $table->integer("qtd_itens");
             $table->timestamps();
         });
     }

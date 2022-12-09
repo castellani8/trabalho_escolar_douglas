@@ -13,7 +13,7 @@
                     <input type="desc_compra" min="1" max="50" class="form-control mb-3" id="desc_buy" name="desc_buy" required>
 
                     <label for="">Quantidade de itens</label>
-                    <input type="number" class="form-control mb-3" id="qtd_itens" name="qtd_itens" required>
+                    <input type="number" min="1" class="form-control mb-3" id="qtd_itens" name="qtd_itens" required>
             </div>
         </div>
         <div class="row">
