@@ -3,17 +3,17 @@
 @section('content')
 
 <div class="container">
-    <form action="{{ route('company.store') }}" method="POST">
+    <form action="{{ route('order.store') }}" method="POST">
         @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="text-center mb-3">Cadastro de Empresas</h1>
+                <h1 class="text-center mb-3">Pedidos</h1>
                     
-                    <label for="">Nome da empresa:</label>
-                    <input class="form-control mb-3" id="company_name" name="company_name" required>
+                    <label for="">Descrição da compra</label>
+                    <input class="form-control mb-3" id="desc_compra" name="desc_compra" required>
 
-                    <label for="">Segmento:</label>
-                    <input class="form-control mb-3" id="segment" name="segment" required>
+                    <label for="">Quantidade de itens</label>
+                    <input class="form-control mb-3" id="qtd_itens" name="qtd_itens" required>
             </div>
         </div>
         <div class="row">
