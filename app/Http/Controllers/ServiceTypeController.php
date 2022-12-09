@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServiceTypeRequest;
+use App\Models\ServiceType;
 use Illuminate\Http\Request;
 
 class ServiceTypeController extends Controller
@@ -32,9 +34,11 @@ class ServiceTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceTypeRequest $request)
     {
-        //
+        ServiceType::query()
+        ->create($request->validated());
+        return redirect(url('service-type'));
     }
 
     /**

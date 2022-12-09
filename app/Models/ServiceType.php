@@ -10,6 +10,6 @@ class ServiceType extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service_type_desc',
+        'service_type_desc'
     ];
 }

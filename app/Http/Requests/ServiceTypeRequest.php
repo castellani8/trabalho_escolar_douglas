@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class OrderRequest extends FormRequest
+class ServiceTypeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'desc_buy '=> 'string',
-            'qtd_itens' => 'int'
+            'service_type_desc' => 'string'
         ];
     }
 }
