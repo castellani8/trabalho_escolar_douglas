@@ -10,10 +10,10 @@
                 <h1 class="text-center mb-3">Pedidos</h1>
                     
                     <label for="">Descrição da compra</label>
-                    <input class="form-control mb-3" id="desc_compra" name="desc_compra" required>
+                    <input type="desc_compra" min="1" max="50" class="form-control mb-3" id="desc_buy" name="desc_buy" required>
 
                     <label for="">Quantidade de itens</label>
-                    <input class="form-control mb-3" id="qtd_itens" name="qtd_itens" required>
+                    <input type="number" class="form-control mb-3" id="qtd_itens" name="qtd_itens" required>
             </div>
         </div>
         <div class="row">

@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'desc_manut',
-        'items_quantity'
+        'desc_buy',
+        'itens_qtd'
     ];
 }

@@ -13,7 +13,7 @@ class OrderRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'desc_buy'=> 'string',
+            'qtd_itens' => 'int'
         ];
     }
 }

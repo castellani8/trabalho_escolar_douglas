@@ -39,7 +39,7 @@ class OrderController extends Controller
         Order::query()
             ->create($request->validated());
 
-        return redirect(url('maintenance'));
+        return redirect(url('Order'));
     }
 
     /**
