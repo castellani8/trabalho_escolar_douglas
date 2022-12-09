@@ -13,6 +13,7 @@ class Fleet extends Model
         'company_id',
         'desc_frota',
         'active',
-        'hystory'
+        'hystory',
+        'dt_manut'
     ];
 }

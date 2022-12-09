@@ -37,7 +37,11 @@ class FleetController extends Controller
      */
     public function store(FleetRequest $request)
     {
+
+        dd($request->all());
+
         Fleet::query()
+
         ->create($request->validated());
 
         return redirect()->back();

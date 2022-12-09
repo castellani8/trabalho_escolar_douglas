@@ -2,8 +2,9 @@
 
 @section('content')
 
+
 <div class="container">
-    <form action="{{ route('Fleet.store') }}" method="POST">
+    <form action="{{ route('fleet.store') }}" method="POST">
         @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -20,6 +21,9 @@
 
                     <label for="">Historico:</label>
                     <input class="form-control mb-3" id="hystory" name="hystory" required>
+
+                    <label for="">Data:</label>
+                    <input class="form-control mb-3" id="dt_manut" name="dt_manut" required>
             </div>
         </div>
         <div class="row">
