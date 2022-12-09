@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MaintenanceType;
 use Illuminate\Http\Request;
+use App\Http\Requests\MaintenanceTypeRequest;
 
 class MaintenanceTypeController extends Controller
 {
@@ -32,9 +34,13 @@ class MaintenanceTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MaintenanceTypeRequest $request)
     {
-        //
+        MaintenanceType::query()
+            ->create($request->validated());
+
+        return redirect()->back();
+
     }
 
     /**
