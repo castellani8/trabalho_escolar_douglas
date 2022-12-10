@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServiceRequest;
+use App\Models\Fleet;
+use App\Models\MaintenanceType;
+use App\Models\Service;
+use App\Models\ServiceType;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -23,7 +28,11 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('service.create');
+        $fleets = Fleet::all();     
+        $serviceTypes = ServiceType::all();
+        $maintenanceTypes = MaintenanceType::all();
+
+        return view('service.create', compact("fleets", "serviceTypes", "maintenanceTypes"));
     }
 
     /**
@@ -32,9 +41,12 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceRequest $request)
     {
-        //
+        Service::query()
+            ->create($request->validated());
+
+        return redirect(url('service'));
     }
 
     /**
