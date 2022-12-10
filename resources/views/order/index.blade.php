@@ -32,6 +32,15 @@
             <td> {{  $order->qtd_itens }} </td> 
             <td> {{  $order->created_at        }} </td> 
             <td> {{  $order->updated_at     }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('order.destroy', $order->id) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</button>      
+              </form>      
+            </td> 
           </tr>
         @endforeach 
     </tbody>

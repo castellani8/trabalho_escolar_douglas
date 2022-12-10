@@ -36,6 +36,15 @@
             <td> {{  $service->maintenance_type_id }} </td> 
             <td> {{  $service->created_at          }} </td> 
             <td> {{  $service->updated_at          }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('service.destroy', $service->id) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</button>      
+              </form>      
+            </td> 
           </tr>
         @endforeach 
       </tbody>

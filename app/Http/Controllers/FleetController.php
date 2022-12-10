@@ -89,6 +89,7 @@ class FleetController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Fleet::destroy($id);
+        return $this->index();
     }
 }

@@ -104,6 +104,7 @@ class ServiceOrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ServiceOrder::destroy($id);
+        return $this->index();
     }
 }

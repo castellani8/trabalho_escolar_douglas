@@ -87,6 +87,7 @@ class ServiceTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ServiceType::destroy($id);
+        return $this->index();
     }
 }

@@ -39,6 +39,15 @@
             <td> {{  $fleet->active     }} </td> 
             <td> {{  $fleet->created_at }} </td> 
             <td> {{  $fleet->updated_at }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('fleet.destroy', $fleet->id) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</button>      
+              </form>      
+            </td> 
           </tr>
         @endforeach      
     </tbody>

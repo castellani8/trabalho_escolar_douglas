@@ -86,6 +86,7 @@ class MaintenanceTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        MaintenanceType::destroy($id);
+        return $this->index();
     }
 }

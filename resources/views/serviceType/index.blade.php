@@ -29,6 +29,15 @@
               <td> {{  $servicetype->service_type_desc }} </td> 
               <td> {{  $servicetype->created_at        }} </td> 
               <td> {{  $servicetype->updated_at        }} </td> 
+              <td>           
+                <form method="POST" action="{{ route('service-type.destroy', $servicetype->id) }}">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit"
+                    class="btn btn-danger btn-md active" 
+                  >Deletar</button>      
+                </form>      
+              </td> 
             </tr>
           @endforeach  
       </tbody>

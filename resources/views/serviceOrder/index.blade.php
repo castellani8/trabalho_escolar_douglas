@@ -40,6 +40,15 @@
             <td> {{  $serviceOrder->desc_manut          }} </td> 
             <td> {{  $serviceOrder->created_at          }} </td> 
             <td> {{  $serviceOrder->updated_at          }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('service-order.destroy', $serviceOrder->id) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</button>      
+              </form>      
+            </td> 
           </tr>
         @endforeach 
     </tbody>

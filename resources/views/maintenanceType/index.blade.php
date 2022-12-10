@@ -31,6 +31,15 @@
             <td> {{  $maintenanceType->desc_manut }} </td> 
             <td> {{  $maintenanceType->created_at }} </td> 
             <td> {{  $maintenanceType->updated_at }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('maintenance.destroy', $maintenanceType->id) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</button>      
+              </form>      
+            </td> 
           </tr>
         @endforeach    
     </tbody>  

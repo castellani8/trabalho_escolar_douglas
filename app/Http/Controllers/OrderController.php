@@ -90,6 +90,7 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Order::destroy($id);
+        return $this->index();
     }
 }

@@ -49,9 +49,9 @@
               <form method="POST" action="{{ route('company.destroy', $company->id) }}">
                 @csrf
                 @method('DELETE')
-                <input type="submit"
+                <button type="submit"
                   class="btn btn-danger btn-md active" 
-                >Deletar</input>      
+                >Deletar</button>      
               </form>      
             </td> 
           </tr>
