@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('service_orders', function (Blueprint $table) {
             $table->id();
             $table->date('order_date');
-            $table->foreignId('service_id')->constrained();
+            $table->foreignId('service_id')->constrained()->onDelete('cascade');
             $table->date('delivery_date');
-            $table->foreignId('order_id')->constrained();
-            $table->foreignId('fleet_id')->constrained();
-            $table->foreignId('maintenance_type_id')->constrained();
+            $table->foreignId('order_id')->constrained()->onDelete('cascade');
+            $table->foreignId('fleet_id')->constrained()->onDelete('cascade');
+            $table->foreignId('maintenance_type_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

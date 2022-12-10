@@ -8,7 +8,7 @@
   <div class="col-auto">
     <div class="row">
       <div class="col-md-6">
-        <h1>Tipos de Empresas</h1>
+        <h1>Empresas</h1>
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
@@ -20,6 +20,7 @@
     <table class="table table-striped table-light">
     <thead>
       <tr>
+        <th scope="col">ID</th>
         <th scope="col">Nome da Empresa</th>
         <th scope="col">Segmento</th>
         <th scope="col">Endereço</th>
@@ -28,6 +29,7 @@
         <th scope="col">Código-Postal</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
+        <th scope="col">Ações</th>
 
       </tr>
     </thead>
@@ -37,12 +39,21 @@
             <td> {{  $company->id           }} </td> 
             <td> {{  $company->company_name }} </td> 
             <td> {{  $company->segment      }} </td> 
-            <td> {{  $company->adress       }} </td> 
+            <td> {{  $company->address       }} </td> 
             <td> {{  $company->city         }} </td> 
             <td> {{  $company->state        }} </td> 
             <td> {{  $company->postal_code  }} </td> 
             <td> {{  $company->created_at   }} </td> 
             <td> {{  $company->updated_at   }} </td> 
+            <td>           
+              <form method="POST" action="{{ route('company.destroy', $company->id) }}">
+                @csrf
+                @method('DELETE')
+                <input type="submit"
+                  class="btn btn-danger btn-md active" 
+                >Deletar</input>      
+              </form>      
+            </td> 
           </tr>
         @endforeach           
     </tbody>
