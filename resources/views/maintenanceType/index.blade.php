@@ -2,13 +2,19 @@
 
 @section('content')
 
-<div class="mx-auto" style="width: 200px;">
-  <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
-</div>
 
 <div class="container justify-content-center">
  <div class="col-auto">
-    <h1>Tipos de Manutenção</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Tipos de Manutenção</h1>
+    </div>  
+    <div class="col-md-6">
+      <div class="mr-auto" style="width: 200px;">
+        <a href="maintenance/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar tipos de manutenção</a>
+      </div>
+    </div>  
+  </div>
     <table class="table table-striped table-light">
     <thead>
       <tr>
@@ -19,61 +25,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">9</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>      
-    </tbody>
-  </table>
+      @foreach ($maintenanceTypes as $maintenanceType)
+          <tr>
+            <td> {{  $maintenanceType->id         }} </td> 
+            <td> {{  $maintenanceType->desc_manut }} </td> 
+            <td> {{  $maintenanceType->created_at }} </td> 
+            <td> {{  $maintenanceType->updated_at }} </td> 
+          </tr>
+        @endforeach    
+    </tbody>  
 
 @endsection

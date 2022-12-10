@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\OrderRequest;
+use App\Models\Fleet;
+use App\Models\MaintenanceType;
 use App\Models\Order;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -15,7 +18,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('order.index');
+        $orders = Order::all();
+        $services = Service::all();
+        $fleets = Fleet::all();
+        $maintenance_types = MaintenanceType::all();
+        return view('order.index', compact('orders', 'services', 'fleets', 'maintenance_types'));
     }
 
     /**
@@ -38,7 +45,6 @@ class OrderController extends Controller
     {
         Order::query()
             ->create($request->validated());
-
         return redirect(url('order'));
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServiceTypeRequest;
+use App\Models\Service;
 use App\Models\ServiceType;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class ServiceTypeController extends Controller
      */
     public function index()
     {
-        return view('serviceType.index');
+        $serviceTypes = ServiceType::all();
+        return view('serviceType.index', compact('serviceTypes'));
     }
 
     /**
@@ -25,7 +27,9 @@ class ServiceTypeController extends Controller
      */
     public function create()
     {
-        return view('serviceType.create');
+        $serviceTypes = ServiceType::all();
+        
+        return view('serviceType.create', compact('serviceTypes'));
     }
 
     /**

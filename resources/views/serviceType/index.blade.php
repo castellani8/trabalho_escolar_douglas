@@ -2,69 +2,38 @@
 
 @section('content')
 
-
-<div class="mx-auto" style="width: 200px;">
-  <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
-</div>
-
 <div class="container justify-content-center">
   <div class="col-auto">
-     <h1>Tipos de Serviço</h1>
-     <table class="table table-striped table-light">
-    <thead>
-      <tr>
-        <th scope="col">Descrição do tipo de serviço</th>
-        <th scope="col">Criado em:</th>
-        <th scope="col">Ultima atualização</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">9</th>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>      
-    </tbody>
-  </table>
+     <div class="row">
+      <div class="col-md-6">     
+        <h1>Tipos de Serviço</h1>
+      </div>  
+      <div class="col-md-6">
+        <div class="mr-auto" style="width: 200px;">
+          <a href="service-type/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Tipos de Serviço</a>
+        </div>
+      </div>  
+    </div>
+    <table class="table table-striped table-light">
+      <thead>
+        <tr>
+          <th scope="col">Descrição do tipo de serviço</th>
+          <th scope="col">Criado em:</th>
+          <th scope="col">Ultima atualização</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($serviceTypes as $servicetype)
+            <tr>
+              <td> {{  $servicetype->id                }} </td> 
+              <td> {{  $servicetype->service_type_desc }} </td> 
+              <td> {{  $servicetype->created_at        }} </td> 
+              <td> {{  $servicetype->updated_at        }} </td> 
+            </tr>
+          @endforeach  
+      </tbody>
+    </table>
+  </div>
+</div>
 
 @endsection

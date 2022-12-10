@@ -16,7 +16,8 @@ class FleetController extends Controller
      */
     public function index()
     {
-        return view('fleet.index');
+        $fleets = Fleet::all();
+        return view('fleet.index', compact('fleets'));
     }
 
     /**
@@ -27,7 +28,8 @@ class FleetController extends Controller
     public function create()
     {
         $companies = Company::all();
-        return view('fleet.create', compact('companies'));
+        $fleets = Fleet::all();
+        return view('fleet.create', compact('fleets', 'companies'));
     }
 
     /**

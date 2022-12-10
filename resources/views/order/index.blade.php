@@ -1,78 +1,39 @@
 @extends('layouts.app')
 
 @section('content')
-
-<div class="mx-auto" style="width: 200px;">
-  <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
-</div>
-
+  
 <div class="container justify-content-center">
   <div class="col-auto">
-     <h1>Pedidos</h1>
+    <div class="row">
+      <div class="col-md-6">     
+        <h1>Pedidos</h1>
+      </div>  
+      <div class="col-md-6">
+        <div class="mr-auto" style="width: 200px;">
+          <a href="order/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Pedido</a>
+        </div>
+      </div>  
+    </div>
      <table class="table table-striped table-light">
      <thead>
       <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Descrição do pedido</th>
         <th scope="col">Quantidade de itens</th>
-        <th scope="col">Descrição manutenção</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Mark</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Jacob</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">9</th>
-        <td>Larry</td>
-        <td>Mark</td>
-        <td>Mark</td>
-      </tr> 
+      @foreach ($orders as $order)
+          <tr>
+            <td> {{  $order->id             }} </td> 
+            <td> {{  $order->desc_buy       }} </td> 
+            <td> {{  $order->qtd_itens }} </td> 
+            <td> {{  $order->created_at        }} </td> 
+            <td> {{  $order->updated_at     }} </td> 
+          </tr>
+        @endforeach 
     </tbody>
   </table>
 

@@ -2,17 +2,22 @@
 
 @section('content')
 
-<div class="mx-auto" style="width: 200px;">
-  <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
-</div>
-
-
 <div class="container justify-content-center">
   <div class="col-auto">
-    <h1>Serviços</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Serviços</h1>
+      </div>  
+      <div class="col-md-6">
+        <div class="mr-auto" style="width: 200px;">
+          <a href="service/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Serviços</a>
+        </div>
+      </div>  
+    </div>
     <table class="table table-striped table-light">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Frota</th>
           <th scope="col">Descrição do serviço</th>
           <th scope="col">Tipo de serviço</th>
@@ -22,78 +27,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Jacob</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Larry</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>Jacob</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>Larry</td>
-          <td>Mark</td>
-          <td>Mark</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>      
+        @foreach ($services as $service)
+          <tr>
+            <td> {{  $service->id                  }} </td> 
+            <td> {{  $service->fleet_id            }} </td> 
+            <td> {{  $service->service_desc        }} </td> 
+            <td> {{  $service->service_type_id     }} </td> 
+            <td> {{  $service->maintenance_type_id }} </td> 
+            <td> {{  $service->created_at          }} </td> 
+            <td> {{  $service->updated_at          }} </td> 
+          </tr>
+        @endforeach 
       </tbody>
     </table>
   </div>

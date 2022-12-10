@@ -5,14 +5,18 @@
 
 
 <div class="row justify-content-center">
-
-  <div class="mx-auto" style="width: 200px;">
-    <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
-  </div>
-
   <div class="col-auto">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Tipos de Empresas</h1>
+      </div>  
+      <div class="col-md-6">
+        <div class="mr-auto" style="width: 200px;">
+          <a href="company/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Empresas</a>
+        </div>
+      </div>  
+    </div>
     <table class="table table-responsive">
-    <h1>Empresas</h1>
     <table class="table table-striped table-light">
     <thead>
       <tr>
@@ -28,101 +32,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">9</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-        <td>Otto</td>
-      </tr>
-    </table>
-  </div>
-</div>
-      
-      
+        @foreach ($companies as $company)
+          <tr>
+            <td> {{  $company->id           }} </td> 
+            <td> {{  $company->company_name }} </td> 
+            <td> {{  $company->segment      }} </td> 
+            <td> {{  $company->adress       }} </td> 
+            <td> {{  $company->city         }} </td> 
+            <td> {{  $company->state        }} </td> 
+            <td> {{  $company->postal_code  }} </td> 
+            <td> {{  $company->created_at   }} </td> 
+            <td> {{  $company->updated_at   }} </td> 
+          </tr>
+        @endforeach           
     </tbody>
   </table>
 

@@ -20,7 +20,16 @@ class ServiceOrderController extends Controller
      */
     public function index()
     {
-        return view('serviceOrder.index');
+        $serviceOrders = ServiceOrder::query()
+            ->fromRaw('service_orders as so')
+            ->selectRaw('so.*, s.service_desc, o.desc_buy, f.desc_frota, mt.desc_manut')
+            ->join('services as s', 'so.service_id', '=', 's.id')
+            ->join('orders as o', 'so.order_id', '=', 'o.id')
+            ->join('fleets as f', 'so.fleet_id', '=', 'f.id')
+            ->join('maintenance_types as mt', 'so.maintenance_type_id', '=', 'mt.id')
+            ->get();
+            
+        return view('serviceOrder.index', compact('serviceOrders'));
     }
 
     /**

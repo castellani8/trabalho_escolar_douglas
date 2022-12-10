@@ -18,7 +18,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('service.index');
+        $services = Service::all();
+        return view('service.index', compact('services'));
     }
 
     /**
@@ -28,11 +29,12 @@ class ServiceController extends Controller
      */
     public function create()
     {
+        $services = Service::all();
         $fleets = Fleet::all();     
         $serviceTypes = ServiceType::all();
         $maintenanceTypes = MaintenanceType::all();
 
-        return view('service.create', compact("fleets", "serviceTypes", "maintenanceTypes"));
+        return view('service.create', compact('fleets', 'serviceTypes', 'maintenanceTypes', 'services'));
     }
 
     /**

@@ -92,7 +92,7 @@
                             <a class="nav-link" href="{{ url('maintenance') }}">Tipos de Manutenção</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('order') }}">Compras</a>
+                            <a class="nav-link" href="{{ url('order') }}">Pedidos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('service-order') }}">Ordem de Serviço</a>

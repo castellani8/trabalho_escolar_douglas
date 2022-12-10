@@ -15,7 +15,8 @@ class MaintenanceTypeController extends Controller
      */
     public function index()
     {
-        return view('maintenanceType.index');
+        $maintenanceTypes = MaintenanceType::all();
+        return view('maintenanceType.index', compact('maintenanceTypes'));
     }
 
     /**
