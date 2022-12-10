@@ -24,7 +24,7 @@ class ServiceTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            'service_type_desc' => 'string'
+            'service_type_desc' => 'string|required'
         ];
     }
 }

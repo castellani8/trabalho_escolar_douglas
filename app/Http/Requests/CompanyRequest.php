@@ -24,12 +24,12 @@ class CompanyRequest extends FormRequest
     public function rules()
     {
         return [
-            'company_name' => 'string',
-            'segment' => 'string',
-            'address' => 'string',
-            'city' => 'string',
-            'state' => 'string|max:2',
-            'postal_code' => 'string'
+            'company_name' => 'string|required',
+            'segment'      => 'string|required',
+            'address'      => 'string|required',
+            'city'         => 'string|required',
+            'state'        => 'string|max:2|required',
+            'postal_code'  => 'string|required'
         ];
     }
 }

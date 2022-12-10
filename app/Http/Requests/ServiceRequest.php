@@ -24,10 +24,10 @@ class ServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'fleet_id'            => 'int',
-            'service_desc'        => 'string',
-            'service_type_id'     => 'int',
-            'maintenance_type_id' => 'int'  
+            'fleet_id'            => 'int|required',
+            'service_desc'        => 'string|required',
+            'service_type_id'     => 'int|required',
+            'maintenance_type_id' => 'int|required'  
         ];
     }
 }

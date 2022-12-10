@@ -24,7 +24,7 @@ class MaintenanceTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            'desc_manut' => 'string',
+            'desc_manut' => 'string|required',
         ];
     }
 }

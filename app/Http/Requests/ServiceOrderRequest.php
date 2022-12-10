@@ -24,12 +24,12 @@ class ServiceOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'order_date'                   => 'date',
-            'service_id'                   => 'int',
-            'delivery_date'                => 'date',
-            'order_id'                     => 'int',
-            'fleet_id'                     => 'int',
-            'maintenance_type_id'          => 'int'
+            'order_date'                   => 'date|required',
+            'service_id'                   => 'int|required',
+            'delivery_date'                => 'date|required',
+            'order_id'                     => 'int|required',
+            'fleet_id'                     => 'int|required',
+            'maintenance_type_id'          => 'int|required'
         ];
     }
 }

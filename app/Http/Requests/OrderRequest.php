@@ -24,8 +24,8 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'desc_buy '=> 'string',
-            'qtd_itens' => 'int'
+            'desc_buy ' => 'string|required',
+            'qtd_itens' => 'int|required'
         ];
     }
 }

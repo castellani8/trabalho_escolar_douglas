@@ -24,11 +24,11 @@ class FleetRequest extends FormRequest
     public function rules()
     {
         return [         
-                'company_id' => 'string',
-                'desc_frota' => 'string',
-                'active' => 'boolean',
-                'hystory' => 'string',
-                'dt_manut' => 'date'
+                'company_id' => 'string|required',
+                'desc_frota' => 'string|required',
+                'active'     => 'boolean|required',
+                'hystory'    => 'string|required',
+                'dt_manut'   => 'date|required'
         ];
     }
 }
