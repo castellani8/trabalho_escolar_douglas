@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServiceOrderRequest;
+use App\Models\Fleet;
+use App\Models\MaintenanceType;
+use App\Models\Order;
+use App\Models\Service;
+use App\Models\ServiceOrder;
+use App\Models\ServiceType;
 use Illuminate\Http\Request;
 
 class ServiceOrderController extends Controller
@@ -22,8 +29,13 @@ class ServiceOrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('serviceOrder.create');
+    {       
+        $services = Service::all();
+        $maintenanceTypes = MaintenanceType::all();
+        $orders = Order::all();
+        $fleets = Fleet::all();
+
+        return view('serviceOrder.create', compact( "maintenanceTypes", "orders", "services", "fleets" ));
     }
 
     /**
@@ -32,9 +44,13 @@ class ServiceOrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceOrderRequest $request)
     {
-        //
+        
+        ServiceOrder::query()
+            ->create($request->validated());
+
+        return redirect(url('service-order'));
     }
 
     /**
