@@ -29,7 +29,7 @@
         <th scope="col">Código-Postal</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
-        <th scope="col">Ações</th>
+        <th scope="col" colspan="2">Ações</th>
 
       </tr>
     </thead>
@@ -45,14 +45,17 @@
             <td> {{  $company->postal_code  }} </td> 
             <td> {{  $company->created_at   }} </td> 
             <td> {{  $company->updated_at   }} </td> 
-            <td>           
+            <td class="d-block"> 
               <form method="POST" action="{{ route('company.destroy', $company->id) }}">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                  class="btn btn-danger btn-md active" 
-                >Deletar</button>      
-              </form>      
+                <div style="white-space: nowrap">          
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                      class="btn btn-danger btn-md" 
+                    >Deletar</button>      
+                  <a href="{{ url('company/edit/'. $company->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                </div>
+              </form>
             </td> 
           </tr>
         @endforeach           

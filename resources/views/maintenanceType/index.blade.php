@@ -22,6 +22,7 @@
         <th scope="col">Descrição manutenção</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -33,11 +34,14 @@
             <td> {{  $maintenanceType->updated_at }} </td> 
             <td>           
               <form method="POST" action="{{ route('maintenance.destroy', $maintenanceType->id) }}">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                  class="btn btn-danger btn-md active" 
-                >Deletar</button>      
+                <div class="nowrap">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit"
+                    class="btn btn-danger btn-md active" 
+                  >Deletar</button>     
+                  <a href="{{ url('maintenance/edit/'. $maintenanceType->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                </div> 
               </form>      
             </td> 
           </tr>

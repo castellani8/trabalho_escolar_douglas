@@ -62,8 +62,8 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {        
+        return view('company.edit');
     }
 
     /**

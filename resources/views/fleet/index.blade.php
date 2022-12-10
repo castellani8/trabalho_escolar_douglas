@@ -26,6 +26,7 @@
         <th scope="col">Ativo</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -41,11 +42,14 @@
             <td> {{  $fleet->updated_at }} </td> 
             <td>           
               <form method="POST" action="{{ route('fleet.destroy', $fleet->id) }}">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                  class="btn btn-danger btn-md active" 
-                >Deletar</button>      
+                <div class="nowrap">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit"
+                    class="btn btn-danger btn-md active" 
+                  >Deletar</button>      
+                  <a href="{{ url('fleet/edit/'. $fleet->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                </div>
               </form>      
             </td> 
           </tr>

@@ -29,7 +29,7 @@ class FleetController extends Controller
     {
         $companies = Company::all();
         $fleets = Fleet::all();
-        return view('fleet.create', compact('fleets', 'companies'));
+        return view('fleet', compact('fleets', 'companies'));
     }
 
     /**

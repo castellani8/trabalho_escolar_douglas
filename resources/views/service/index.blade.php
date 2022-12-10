@@ -38,11 +38,14 @@
             <td> {{  $service->updated_at          }} </td> 
             <td>           
               <form method="POST" action="{{ route('service.destroy', $service->id) }}">
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                  class="btn btn-danger btn-md active" 
-                >Deletar</button>      
+                  <div class="nowrap">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                      class="btn btn-danger btn-md active" 
+                    >Deletar</button>      
+                    <a href="{{ url('service/edit/'. $service->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                  </div>
               </form>      
             </td> 
           </tr>
