@@ -3,9 +3,13 @@
 @section('content')
 
 
+
 <div class="row justify-content-center">
- 
-  
+
+  <div class="mx-auto" style="width: 200px;">
+    <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
+  </div>
+
   <div class="col-auto">
     <table class="table table-responsive">
     <h1>Empresas</h1>

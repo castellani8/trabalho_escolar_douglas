@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="mx-auto" style="width: 200px;">
+  <a href="company/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar Empresas</a>
+</div>
+
+
 <div class="container justify-content-center">
   <div class="col-auto">
      <h1>Ordem de serviço</h1>
