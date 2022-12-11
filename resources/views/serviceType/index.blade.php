@@ -21,6 +21,7 @@
           <th scope="col">Descrição do tipo de serviço</th>
           <th scope="col">Criado em:</th>
           <th scope="col">Ultima atualização</th>
+          <th scope="col">Ações</th>
         </tr>
       </thead>
       <tbody>
