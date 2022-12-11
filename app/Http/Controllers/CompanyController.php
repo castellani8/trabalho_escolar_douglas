@@ -62,8 +62,11 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {        
-        return view('company.edit');
+    {
+        $company = Company::find($id);
+        return view('company.edit', [
+            'company' => $company
+        ]);
     }
 
     /**
@@ -73,9 +76,13 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyRequest $request, $id)
     {
-        //
+        Company::query()
+            ->find($id)
+            ->update($request->validated());
+
+        return $this->index();
     }
 
     /**

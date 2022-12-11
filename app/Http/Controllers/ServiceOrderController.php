@@ -80,8 +80,15 @@ class ServiceOrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {    
+        $maintenanceTypes = MaintenanceType::all();
+        $orders = Order::all();
+        $fleets = Fleet::all();
+        $services = Service::all();
+        $serviceOrder = ServiceOrder::query()->find($id);
+
+        return view('serviceOrder.edit', compact("services", "maintenanceTypes", "orders", "serviceOrder", "fleets" ));
+    
     }
 
     /**
@@ -91,9 +98,10 @@ class ServiceOrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceOrderRequest $request, $id)
     {
-        //
+        ServiceOrder::query()->find($id)->update($request->validated());
+        return $this->index();
     }
 
     /**

@@ -16,7 +16,11 @@ class FleetController extends Controller
      */
     public function index()
     {
-        $fleets = Fleet::all();
+        $fleets = Fleet::query()
+            ->selectRaw('fleets.*, companies.company_name')
+            ->join('companies', 'fleets.company_id', '=', 'companies.id')
+            ->get();
+
         return view('fleet.index', compact('fleets'));
     }
 
@@ -29,7 +33,7 @@ class FleetController extends Controller
     {
         $companies = Company::all();
         $fleets = Fleet::all();
-        return view('fleet', compact('fleets', 'companies'));
+        return view('fleet.create', compact('fleets', 'companies'));
     }
 
     /**
@@ -43,7 +47,7 @@ class FleetController extends Controller
         Fleet::query()
             ->create($request->validated());
 
-        return redirect()->back();
+        return $this->index();
 
     }
 
@@ -66,7 +70,9 @@ class FleetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $companies = Company::all();
+        $fleet = Fleet::query()->find($id);
+        return view('fleet.edit', compact('fleet', 'companies'));
     }
 
     /**
@@ -76,9 +82,10 @@ class FleetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FleetRequest $request, $id)
     {
-        //
+        Fleet::query()->find($id)->update($request->validated());
+        return $this->index();
     }
 
     /**

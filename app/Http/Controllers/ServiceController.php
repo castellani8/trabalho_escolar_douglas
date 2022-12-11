@@ -69,8 +69,13 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    { 
+        $fleets = Fleet::all();     
+        $serviceTypes = ServiceType::all();
+        $maintenanceTypes = MaintenanceType::all();
+        $service = Service::query()->find($id);
+
+        return view('service.edit', compact('service','fleets', 'serviceTypes', 'maintenanceTypes'));
     }
 
     /**
@@ -80,9 +85,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceRequest $request, $id)
     {
-        //
+        Service::query()->find($id)->update($request->validated());
+        return $this->index();
     }
 
     /**

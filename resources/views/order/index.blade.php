@@ -30,8 +30,8 @@
           <tr>
             <td> {{  $order->id             }} </td> 
             <td> {{  $order->desc_buy       }} </td> 
-            <td> {{  $order->qtd_itens }} </td> 
-            <td> {{  $order->created_at        }} </td> 
+            <td> {{  $order->qtd_itens      }} </td> 
+            <td> {{  $order->created_at     }} </td> 
             <td> {{  $order->updated_at     }} </td> 
             <td>           
               <form method="POST" action="{{ route('order.destroy', $order->id) }}">
@@ -41,7 +41,7 @@
                   <button type="submit"
                     class="btn btn-danger btn-md active" 
                   >Deletar</button>  
-                  <a href="{{ url('order/edit/'. $order->id) }}" class="btn btn-warning btn-md">Editar</a>         
+                  <a href="{{  route('order.edit', ['order' => $order->id]) }}" class="btn btn-warning btn-md">Editar</a>         
                 </div> 
               </form>      
             </td> 

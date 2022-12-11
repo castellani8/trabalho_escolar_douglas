@@ -77,25 +77,25 @@
                             <a class="nav-link" href="{{ route('home') }}">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('company') }}">Empresas</a>
+                            <a class="nav-link" href="{{ route('company.index') }}">Empresas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('fleet') }}">Frota</a>
+                            <a class="nav-link" href="{{ route('fleet.index') }}">Frota</a>
                         </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="{{ url('service') }}">Serviços</a>
+                            <a class="nav-link" href="{{ route('service.index') }}">Serviços</a>
                         </li> 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('service-type') }}">Tipos de Serviços</a>
+                            <a class="nav-link" href="{{ route('service-type.index') }}">Tipos de Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('maintenance') }}">Tipos de Manutenção</a>
+                            <a class="nav-link" href="{{ route('maintenance.index') }}">Tipos de Manutenção</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('order') }}">Pedidos</a>
+                            <a class="nav-link" href="{{ route('order.index') }}">Pedidos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('service-order') }}">Ordem de Serviço</a>
+                            <a class="nav-link" href="{{ route('service-order.index') }}">Ordem de Serviço</a>
                         </li>
                     </ul>
                 </div>

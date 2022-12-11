@@ -10,7 +10,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="service/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Serviços</a>
+          <a href="/service/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Serviços</a>
         </div>
       </div>  
     </div>
@@ -24,6 +24,7 @@
           <th scope="col">Tipo de manutenção</th>
           <th scope="col">Criado em:</th>
           <th scope="col">Ultima atualização</th>
+          <th scope="col" colspan="2">Ações</th>
         </tr>
       </thead>
       <tbody>
@@ -44,7 +45,7 @@
                     <button type="submit"
                       class="btn btn-danger btn-md active" 
                     >Deletar</button>      
-                    <a href="{{ url('service/edit/'. $service->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                    <a href="{{  route('service.edit', ['service' => $service->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                   </div>
               </form>      
             </td> 

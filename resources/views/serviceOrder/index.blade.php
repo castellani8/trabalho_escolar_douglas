@@ -26,6 +26,7 @@
         <th scope="col">Tipo de Manutenção</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -42,13 +43,13 @@
             <td> {{  $serviceOrder->updated_at          }} </td> 
             <td>           
               <form method="POST" action="{{ route('service-order.destroy', $serviceOrder->id) }}">
-                <div class="nowrap">
+                <div class="nowrap" style="white-space: nowrap">
                   @csrf
                   @method('DELETE')
                   <button type="submit"
                     class="btn btn-danger btn-md active" 
                   >Deletar</button>      
-                  <a href="{{ url('service-order/edit/'. $serviceOrder->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                  <a href="{{  route('service-order.edit', ['service_order' => $serviceOrder->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                 </div>
               </form>      
             </td> 

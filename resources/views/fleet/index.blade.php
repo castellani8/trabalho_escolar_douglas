@@ -33,7 +33,7 @@
       @foreach ($fleets as $fleet)
           <tr>
             <td> {{  $fleet->id         }} </td> 
-            <td> {{  $fleet->company_id }} </td> 
+            <td> {{  $fleet->company_name }} </td> 
             <td> {{  $fleet->desc_frota }} </td> 
             <td> {{  $fleet->hystory    }} </td> 
             <td> {{  $fleet->dt_manut   }} </td> 
@@ -48,7 +48,7 @@
                   <button type="submit"
                     class="btn btn-danger btn-md active" 
                   >Deletar</button>      
-                  <a href="{{ url('fleet/edit/'. $fleet->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                  <a href="{{  route('fleet.edit', ['fleet' => $fleet->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                 </div>
               </form>      
             </td> 

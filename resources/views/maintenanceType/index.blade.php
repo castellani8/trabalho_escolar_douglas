@@ -40,7 +40,7 @@
                   <button type="submit"
                     class="btn btn-danger btn-md active" 
                   >Deletar</button>     
-                  <a href="{{ url('maintenance/edit/'. $maintenanceType->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                  <a href="{{  route('maintenance.edit', ['maintenance' => $maintenanceType->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                 </div> 
               </form>      
             </td> 

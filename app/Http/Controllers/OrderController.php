@@ -67,7 +67,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order = Order::query()->find($id);
+        return view('order.edit', compact('order'));
     }
 
     /**
@@ -77,9 +78,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(OrderRequest $request, $id)
     {
-        //
+        Order::query()->find($id)->update($request->validated());
+        return $this->index();
     }
 
     /**

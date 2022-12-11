@@ -40,7 +40,7 @@ class MaintenanceTypeController extends Controller
         MaintenanceType::query()
             ->create($request->validated());
 
-        return redirect(url('maintenance'));
+        return $this->index();
 
     }
 
@@ -63,7 +63,10 @@ class MaintenanceTypeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $maintenanceType = MaintenanceType::find($id);
+        return view('maintenanceType.edit', [
+            'maintenanceType' => $maintenanceType
+        ]);
     }
 
     /**
@@ -73,9 +76,10 @@ class MaintenanceTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MaintenanceTypeRequest $request, $id)
     {
-        //
+        MaintenanceType::query()->find($id)->update($request->validated());
+        return $this->index();
     }
 
     /**

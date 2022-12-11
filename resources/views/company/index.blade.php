@@ -53,7 +53,7 @@
                     <button type="submit"
                       class="btn btn-danger btn-md" 
                     >Deletar</button>      
-                  <a href="{{ url('company/edit/'. $company->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                  <a href="{{ route('company.edit', ['company' => $company->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                 </div>
               </form>
             </td> 

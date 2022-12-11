@@ -10,7 +10,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="service-type/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Tipos de Serviço</a>
+          <a href="/service-type/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Tipos de Serviço</a>
         </div>
       </div>  
     </div>
@@ -37,7 +37,7 @@
                     <button type="submit"
                       class="btn btn-danger btn-md active" 
                     >Deletar</button>    
-                    <a href="{{ url('service-type/edit/'. $servicetype->id) }}" class="btn btn-warning btn-md">Editar</a>      
+                    <a href="{{ route('service-type.edit', ['service_type' => $servicetype->id]) }}" class="btn btn-warning btn-md">Editar</a>      
                   </div>  
                 </form>      
               </td> 
