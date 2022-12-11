@@ -17,6 +17,7 @@
     <table class="table table-striped table-light">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Descrição do tipo de serviço</th>
           <th scope="col">Criado em:</th>
           <th scope="col">Ultima atualização</th>
