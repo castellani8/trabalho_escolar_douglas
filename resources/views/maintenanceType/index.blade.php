@@ -11,7 +11,7 @@
     </div>  
     <div class="col-md-6">
       <div class="mr-auto" style="width: 200px;">
-        <a href="maintenance/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar tipos de manutenção</a>
+        <a href="/public/maintenance/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar tipos de manutenção</a>
       </div>
     </div>  
   </div>

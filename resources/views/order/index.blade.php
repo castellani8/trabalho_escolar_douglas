@@ -10,7 +10,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="order/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Pedido</a>
+          <a href="/public/order/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Pedido</a>
         </div>
       </div>  
     </div>

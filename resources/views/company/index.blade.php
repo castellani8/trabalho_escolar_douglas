@@ -12,7 +12,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="company/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Empresas</a>
+          <a href="/public/company/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Empresas</a>
         </div>
       </div>  
     </div>
