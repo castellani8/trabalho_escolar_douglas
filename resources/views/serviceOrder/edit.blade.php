@@ -10,7 +10,7 @@
              <div class="col-md-6">
                 <h1 class="text-center mb-3">Editar ordem de serviço</h1>
                     
-                <label for="">Data do pedido:</label>
+                <label for="">Data da Ordem:</label>
                 <input value="{{ $serviceOrder->order_date }}" type="date" class="form-control mb-3" id="order_date" name="order_date" required>
 
                 <label for="">Serviço:</label>
@@ -20,10 +20,10 @@
                     @endforeach
                 </select> 
 
-                <label for="">Data de Envio:</label>
+                <label for="">Data da entrega:</label>
                 <input value="{{ $serviceOrder->delivery_date }}" type="date" id="delivery_date" name="delivery_date" class="form-control mb-3">
 
-                <label for="">Pedido:</label>
+                <label for="">Solicitação de Compra:</label>
                 <select id="order_id" name="order_id" class="form-control mb-3">
                     @foreach ($orders as $order)
                         <option {{ $serviceOrder->order_id == $order->id ? 'selected' : '' }} value="{{ $order->id }}">{{ $order->desc_buy }}</option>

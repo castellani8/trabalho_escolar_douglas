@@ -22,7 +22,7 @@
         <th scope="col">Empresa</th>
         <th scope="col">Descrição</th>
         <th scope="col">Historico</th>
-        <th scope="col">Data manutenção</th>
+        <th scope="col">Data Manutenção</th>
         <th scope="col">Ativo</th>
         <th scope="col">Criado em:</th>
         <th scope="col">Ultima atualização</th>
@@ -37,7 +37,7 @@
             <td> {{  $fleet->desc_frota }} </td> 
             <td> {{  $fleet->hystory    }} </td> 
             <td> {{  $fleet->dt_manut   }} </td> 
-            <td> {{  $fleet->active     }} </td> 
+            <td> {{ $fleet->active == 1 ? 'sim' : 'nao' }} </td> 
             <td> {{  $fleet->created_at }} </td> 
             <td> {{  $fleet->updated_at }} </td> 
             <td>           

@@ -17,15 +17,16 @@
                         @endforeach
                     </select>
 
+                    <label for="">Ativo:</label>
+                    <input class="form-control mb-3" id="active" name="active" required>
+                    
                     <label for="">Descrição da frota</label>
-                    <input class="form-control mb-3" id="desc_frota" name="desc_frota" required>
-
-                    <input type="hidden" value="1" class="form-control mb-3" id="active" name="active" />
+                    <input type="hidden" value="1" class="form-control mb-3" id="desc_frota" name="desc_frota" />
 
                     <label for="">Historico:</label>
                     <input class="form-control mb-3" id="hystory" name="hystory" required>
 
-                    <label for="">Data:</label>
+                    <label for="">Data Manutenção</label>
                     <input type="date" class="form-control mb-3" id="dt_manut" name="dt_manut" required>
             </div>
         </div>
