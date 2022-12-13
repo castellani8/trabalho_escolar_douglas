@@ -10,7 +10,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="/public/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
+          <a href="public/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
         </div>
       </div>  
     </div>
@@ -32,14 +32,14 @@
     <tbody>
       @foreach ($fleets as $fleet)
           <tr>
-            <td> {{  $fleet->id         }} </td> 
-            <td> {{  $fleet->company_name }} </td> 
-            <td> {{  $fleet->desc_frota }} </td> 
-            <td> {{  $fleet->hystory    }} </td> 
-            <td> {{  $fleet->dt_manut   }} </td> 
+            <td> {{  $fleet->id                         }} </td> 
+            <td> {{  $fleet->company_name               }} </td> 
+            <td> {{  $fleet->desc_frota                 }} </td> 
+            <td> {{  $fleet->hystory                    }} </td> 
+            <td> {{  $fleet->dt_manut                   }} </td> 
             <td> {{ $fleet->active == 1 ? 'sim' : 'nao' }} </td> 
-            <td> {{  $fleet->created_at }} </td> 
-            <td> {{  $fleet->updated_at }} </td> 
+            <td> {{  $fleet->created_at                 }} </td> 
+            <td> {{  $fleet->updated_at                 }} </td> 
             <td>           
               <form method="POST" action="{{ route('fleet.destroy', $fleet->id) }}">
                 <div class="nowrap">

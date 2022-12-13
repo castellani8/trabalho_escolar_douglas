@@ -16,21 +16,21 @@
                             <option value="{{ $company->id }}">{{ $company->company_name }}</option>
                         @endforeach
                     </select>
-
-                    <label for="">Ativo:</label>
-                    <input class="form-control mb-3" id="active" name="active" required>
-                    
+                     
                     <label for="">Descrição da frota</label>
-                    <input type="hidden" value="1" class="form-control mb-3" id="desc_frota" name="desc_frota" />
-
+                    <input type="form-control" value="" class="form-control mb-3" id="desc_frota" name="desc_frota" />
+                                                         
                     <label for="">Historico:</label>
                     <input class="form-control mb-3" id="hystory" name="hystory" required>
 
                     <label for="">Data Manutenção</label>
-                    <input type="date" class="form-control mb-3" id="dt_manut" name="dt_manut" required>
+                    <input type="date" class="form-control mb-3" id="dt_manut" name="dt_manut" required/>
+
+                    <label for="active">Ativo:</label>
+                    <input class="form-check-input" type="checkbox" id="active" name="active" checked /> 
+                </div>
             </div>
-        </div>
-        <div class="row">
+            <div class="row">
             <div class="col-md-6"></div>
             <div class="col-md-3">
                 <button type="submit" class="btn w-100 btn-md btn-primary">Salvar</button>
