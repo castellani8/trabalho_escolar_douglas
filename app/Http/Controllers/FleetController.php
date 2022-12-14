@@ -17,6 +17,8 @@ class FleetController extends Controller
      */
     public function index()
     {
+        dd($_POST);
+
         $fleets = Fleet::query()
             ->selectRaw('fleets.*, companies.company_name')
             ->join('companies', 'fleets.company_id', '=', 'companies.id')
