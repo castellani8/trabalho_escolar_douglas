@@ -10,7 +10,7 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="public/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
+          <a href="/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
         </div>
       </div>  
     </div>
