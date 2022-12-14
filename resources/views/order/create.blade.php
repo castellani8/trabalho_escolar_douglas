@@ -7,7 +7,7 @@
         @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="text-center mb-3">Ordem de serviço</h1>
+                <h1 class="text-center mb-3">Compras</h1>
                     
                     <label for="">Descrição da compra</label>
                     <input type="text" min="1" max="50" class="form-control mb-3" id="desc_buy" name="desc_buy" required>
