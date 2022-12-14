@@ -9,7 +9,7 @@
              <div class="col-md-6">
                 <h1 class="text-center mb-3">Ordem de serviço</h1>
                     
-                <label for="">Data do pedido:</label>
+                <label for="">Data da ordem:</label>
                 <input type="date" class="form-control mb-3" id="order_date" name="order_date" required>
 
                 <label for="">Serviço:</label>
@@ -19,17 +19,17 @@
                     @endforeach
                 </select> 
 
-                <label for="">Data de Envio:</label>
+                <label for="">Data da entrega:</label>
                 <input type="date" id="delivery_date" name="delivery_date" class="form-control mb-3">
 
-                <label for="">Pedido:</label>
+                <label for="">Compra:</label>
                 <select id="order_id" name="order_id" class="form-control mb-3">
                     @foreach ($orders as $order)
                         <option value="{{ $order->id }}">{{ $order->desc_buy }}</option>
                     @endforeach
                 </select> 
 
-                <label for="">Frotas:</label>
+                <label for="">Frota:</label>
                 <select id="fleet_id" name="fleet_id" class="form-control mb-3">
                     @foreach ($fleets as $fleet)
                         <option value="{{ $fleet->id }}">{{ $fleet->desc_frota }}</option>
