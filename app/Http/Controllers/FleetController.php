@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Fleet;
 use App\Http\Requests\FleetRequest;
 use App\Models\Company;
+use Throwable;
 
 class FleetController extends Controller
 {
@@ -44,9 +45,14 @@ class FleetController extends Controller
      */
     public function store(FleetRequest $request)
     {
-        Fleet::query()
-        ->create($request->validated());
+        try{
+            Fleet::query()
+            ->create($request->validated());
         
+        } catch(\Exception $e){
+            echo $e->getMessage();
+        }
+
         return $this->index();
     }
 
