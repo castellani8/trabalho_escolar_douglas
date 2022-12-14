@@ -7,7 +7,8 @@
         @csrf
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="text-center mb-3">Tipo de serviço</h1>                   
+                <h1 class="text-center mb-3">Serviços
+                    </h1>                   
             </div> 
 
             <label for="">Selecione a frota</label>
