@@ -26,7 +26,7 @@ class FleetRequest extends FormRequest
         return [         
                 'company_id' => 'int',
                 'desc_frota' => 'string',
-                'active'     => 'required',
+                'active'     => 'string',
                 'hystory'    => 'string',
                 'dt_manut'   => 'date'
         ];

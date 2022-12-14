@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('company_id')->constrained()->onDelete('cascade');
             $table->string("desc_frota", 50);
-            $table->boolean('active');
+            $table->string('active');
             $table->string("hystory", 500);
             $table->date('dt_manut');
             $table->timestamps();

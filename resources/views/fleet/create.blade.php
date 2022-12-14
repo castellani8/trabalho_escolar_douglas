@@ -28,7 +28,11 @@
                     <input type="date" class="form-control mb-3" id="dt_manut" name="dt_manut" required/>
 
                     <label for="active">Ativo:</label>
-                    <input class="form-check-input" value="1" type="checkbox" id="active" name="active" checked /> 
+                    <? let num = 1;
+                    let text = num.toString('Sim')
+                    let num = 2;
+                    let text = num.toString('Não')> </?>
+                   <input class="form-control" placeholder="(Sim) | (Não)" value="" type="string" id="active" name="active" /> 
                 </div>
             </div>
             <div class="row">
