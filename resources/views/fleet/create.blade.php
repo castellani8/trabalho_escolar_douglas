@@ -6,19 +6,20 @@
 <div class="container">
     <form action="{{ route('fleet.store') }}" method="POST">
         @csrf
+        @method('POST')
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="text-center mb-3">Frotas</h1>
                     
                     <label for="">Empresa:</label>
-                    <select id="company_id" name="company_id" class="form-control mb-3">
+                    <select id="company_id" name="company_id" class="form-control mb-3" required>
                         @foreach ($companies as $company)
                             <option value="{{ $company->id }}">{{ $company->company_name }}</option>
                         @endforeach
                     </select>
                      
                     <label for="">Descrição da frota</label>
-                    <input type="form-control" value="" class="form-control mb-3" id="desc_frota" name="desc_frota" />
+                    <input type="form-control" value="" class="form-control mb-3" id="desc_frota" name="desc_frota" required/>
                                                          
                     <label for="">Historico:</label>
                     <input class="form-control mb-3" id="hystory" name="hystory" required>
@@ -27,7 +28,7 @@
                     <input type="date" class="form-control mb-3" id="dt_manut" name="dt_manut" required/>
 
                     <label for="active">Ativo:</label>
-                    <input class="form-check-input" type="checkbox" id="active" name="active" checked /> 
+                    <input class="form-check-input" value="1" type="checkbox" id="active" name="active" checked /> 
                 </div>
             </div>
             <div class="row">
