@@ -92,7 +92,7 @@
                             <a class="nav-link" href="{{ route('maintenance.index') }}">Tipos de Manutenção</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('order.index') }}">Pedidos</a>
+                            <a class="nav-link" href="{{ route('order.index') }}">Compras</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('service-order.index') }}">Ordem de Serviço</a>
