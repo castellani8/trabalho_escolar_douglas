@@ -10,12 +10,8 @@
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-<<<<<<< HEAD
           <a href="/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
-=======
-          <a href="public/fleet/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Frotas</a>
->>>>>>> be201c447a2fe63add88ae23607aeb3012287885
-        </div>
+      </div>
       </div>  
     </div>
     <table class="table table-striped table-light">

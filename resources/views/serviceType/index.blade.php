@@ -12,7 +12,7 @@
         <div class="mr-auto" style="width: 200px;">
           <a href="/service-type/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Tipos de Serviço</a>
         </div>
-      </div>  
+      </div>    
     </div>
     <table class="table table-striped table-light">
       <thead>
