@@ -6,11 +6,11 @@
   <div class="col-auto">
     <div class="row">
       <div class="col-md-6">     
-        <h1>Pedidos</h1>
+        <h1>Compras</h1>
       </div>  
       <div class="col-md-6">
         <div class="mr-auto" style="width: 200px;">
-          <a href="/public/order/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Pedido</a>
+          <a href="/public/order/create" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Cadastrar Compra</a>
         </div>
       </div>  
     </div>
