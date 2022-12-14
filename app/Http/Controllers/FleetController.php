@@ -17,8 +17,6 @@ class FleetController extends Controller
      */
     public function index()
     {
-        dd($_POST);
-
         $fleets = Fleet::query()
             ->selectRaw('fleets.*, companies.company_name')
             ->join('companies', 'fleets.company_id', '=', 'companies.id')
@@ -47,7 +45,6 @@ class FleetController extends Controller
      */
     public function store(FleetRequest $request)
     {
-        dd($request);
         try{
             Fleet::query()
             ->create($request->validated());
