@@ -32,7 +32,7 @@
                     let text = num.toString("Sim")
                     let num = 2;
                     let text = num.toString("Não")> </?>
-                   <input class="form-control" placeholder="(Sim) | (Não)" value="" type="string" id="active" name="active" /> 
+                   <input class="form-control" placeholder="1(Sim) | 2(Não)" value="" type="string" id="active" name="active" /> 
                 </div>
             </div>
             <div class="row">
