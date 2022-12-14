@@ -15,6 +15,5 @@ class Fleet extends Model
         'active',
         'hystory',
         'dt_manut',
-        'dt_manut'
     ];
 }

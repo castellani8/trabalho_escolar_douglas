@@ -32,7 +32,7 @@
             </select> 
 
             <label for="">Descrição do serviço</label>
-            <input type="int" min="1" max="50" class="form-control mb-3" id="service_desc" name="service_desc" required>
+            <input type="string" min="1" maxlength="10" class="form-control mb-3" id="service_desc" name="service_desc" required>
 
             </div>
             <div class="row justify-content-center">
