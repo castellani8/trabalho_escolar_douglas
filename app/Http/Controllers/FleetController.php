@@ -45,6 +45,7 @@ class FleetController extends Controller
      */
     public function store(FleetRequest $request)
     {
+        dd($request);
         try{
             Fleet::query()
             ->create($request->validated());
